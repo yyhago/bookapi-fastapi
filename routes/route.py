@@ -1,7 +1,8 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
 
+from database.db import livro_db
 
 appRouter = APIRouter()
 
@@ -10,12 +11,12 @@ class Livro(BaseModel):
     titulo:str
     autor:str
     ano_publicacao:int
-    lido:Optional[bool]
+    lido:Optional[bool] = False
 
 
-@appRouter.get("/listarlivros")
+@appRouter.get("/listarlivros", response_model=List[Livro])
 def livros():
-    pass
+    return livro_db 
 
 
 @appRouter.post("/adicionarlivro")
