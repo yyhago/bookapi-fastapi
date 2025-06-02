@@ -77,10 +77,10 @@ uvicorn main:app --reload
 
 | Método | Endpoint | Descrição | Status |
 |--------|----------|-----------|--------|
-| `POST` | `/livros` | Adicionar novo livro | ❌ |
-| `GET` | `/livros` | Listar todos os livros | ❌ |
-| `PUT` | `/livros/{id}` | Atualizar informações do livro | ❌ |
-| `DELETE` | `/livros/{id}` | Remover livro do acervo | ❌ |
+| `POST` | `/livros` | Adicionar novo livro | ✅ |
+| `GET` | `/livros` | Listar todos os livros | ✅ |
+| `PUT` | `/livros/{id}` | Atualizar informações do livro | ✅ |
+| `DELETE` | `/livros/{id}` | Remover livro do acervo | ✅ |
 
 **Legenda**: ✅ Implementado | 🔄 Em desenvolvimento | ❌ Não implementado
 
@@ -120,11 +120,11 @@ curl -X GET "http://localhost:8000/livros"
 - [x] Estrutura base do projeto
 - [x] Configuração FastAPI
 - [x] Modelo de dados com Pydantic
-- [ ] Endpoint POST /livros
-- [ ] Simulação de banco de dados
-- [ ] Endpoint GET /livros/busca
-- [ ] Endpoint PUT /livros/{id}
-- [ ] Endpoint DELETE /livros/{id}
+- [x] Endpoint POST /livros
+- [x] Simulação de banco de dados
+- [x] Endpoint GET /livros/busca
+- [x] Endpoint PUT /livros/{id}
+- [x] Endpoint DELETE /livros/{id}
 
 
 ## Contribuição
